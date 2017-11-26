@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+        <style>
+            /* CSS reset */
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font-family: "Helvetica", "Arial", "sans serif";
+                font-weight: normal; 
+                line-height: 1.3;
+                text-align: left;
+                vertical-align: baseline;
+                box-sizing: border-box;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section {
+                display: block;
+            }
+            body {
+                line-height: 1;
+                background-color: #f2f2f2;
+            }
+            ol, ul {
+                list-style: none;
+            }
+            blockquote, q {
+                quotes: none;
+            }
+            blockquote:before, blockquote:after,
+            q:before, q:after {
+                content: '';
+                content: none;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+
+            a {
+                color: #2ba6cb;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color:#000;
+            }
+
+            b, strong {
+                font-weight: bold;
+            }
+            /* End of CSS reset */
+            main {
+                margin-top: 20px;
+            }
+
+            .container {
+                width: 620px;
+            }
+
+            .wrapper {
+                padding: 10px 20px 0px 0px;
+                /* overflow: auto; */
+            }
+
+            .flex {
+                display: flex;
+            }
+
+            .sub-columns {
+                padding-right: 10px;
+            }
+
+            .center {
+                margin: 0 auto;
+            }
+
+            ul {
+                display: block;
+                list-style-type: disc;
+                -webkit-margin-before: 1em;
+                -webkit-margin-after: 1em;
+                -webkit-margin-start: 0px;
+                -webkit-margin-end: 0px;
+                -webkit-padding-start: 40px;
+            }
+
+            li {
+                display: list-item;
+                text-align: -webkit-match-parent;
+                font-size: 13px;
+            }
+
+            h3 { font-size: 32px }
+
+            h6 { font-size: 20px }
+
+            p {
+                font-size: 13px;
+                line-height: 18px;
+                margin-bottom: 10px;
+            }
+
+            /* column sizes */
+            .twelve {
+                width: 580px;
+                margin: 0 auto;
+            }
+
+            .nine { width: 430px; }
+
+            .eight { width: calc(100%*(2 / 3)); }
+
+            .six { width: 50%; }
+
+            .four { width: calc(100% / 3); }
+
+            .three { width: 130px; }
+
+            /* color */
+            .white {
+                background-color: #fff;
+            }
+
+            .s-red {
+                background-color: #8c1515;
+            }
+
+            /* header */
+            .newsletter-date {
+                color: #000;
+                font-weight: bold;
+                font-size: 10px;
+            }
+
+            /* main content */
+            .newsletter-title {
+                font-family: "Times","serif";
+                text-align: center;
+            }
+
+            .newsletter-title-byline {
+                text-align: center;
+                font-size: 14px;
+                line-height: 17px;
+                color: #fff;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+
+            .section-title {
+                font-size: 18px;
+                font-weight: 800;
+                font-family: "Georgia","serif";
+                border-bottom: 2px solid #000;
+                padding: 0 0 10px;
+                margin-bottom: 10px;
+            }
+
+            .story-image {
+                margin-bottom: 10px;
+            }
+
+            /* Grant Rounds */
+            .pre-event {
+                font-size: 11px;
+                color: #09425a;
+                text-transform: uppercase;
+                text-decoration: none;
+                letter-spacing: 0px;
+                margin-bottom: 0px;
+            }
+
+            .event-title {
+                color: #666666;
+                font-size: 14px;
+                line-height: 18px;
+                margin-bottom: 0;
+            }
+
+            .event-title a {
+                color: #666666;
+                font-size: 14px;
+                line-height: 18px;
+                margin-bottom: 0;
+            }
+
+            .event-blurb {
+                font-family: "Helvetica","sans serif";
+                color: #505050;
+                font-size: 11px;
+            }
+
+            /* Latest News */
+            .story-title {
+                margin-bottom: 0;
+            }
+
+            .story-title a span{
+                color: #8B1515;
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 0;
+            }
+
+            .story-blurb {
+                color: #505050;
+            }
+
+            .last {
+                padding-right: 0px;
+            }
+
+            /* In the news */
+            .panel {
+                background: #f2f2f2;
+                border: 1px solid #d9d9d9;
+                padding: 10px;
+            }
+
+            .other-news-header {
+                font-family: "Georgia","serif";
+            }
+
+            .in-the-news-excerpt a {
+                font-size: 11px;
+            }
+
+            .in-the-news-excerpt span {
+                font-size: 11px;
+                color: #000;
+            }
+
+            .post-excerpt {
+                margin: 1px 0px 0px;
+                color: #505050;
+                font-family: "Helvetica","sans serif";
+                font-size: 10px;
+                line-height: 13px;
+            }
+
+            /* Twitter */
+            .story-title {
+                color: #8B1515;
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 0;
+            }
+
+            /* Footer */
+            footer {
+                margin: 20px auto;
+            }
+
+            footer ul {
+                justify-content: center;
+                padding: 10px 0;
+            }
+
+            footer ul li {
+                display: inline;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        
+        <header>
+            <div class="container center">
+                <div class="wrapper last">
+                    <div class="twelve flex">
+                        <div class="six sub-columns">
+                            <img width="200" height="31" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/8b6142d6-db3f-4a2e-a96f-8ae0e29f4f2d.png">
+                        </div>
+                        <div class="six sub-columns last" style="text-align:right;">
+                            <span class="newsletter-date">MONDAY, November 20, 2017</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="white container center">
+                <!-- title -->
+                <section class="s-red">
+                    <div class="wrapper last" style="overflow: auto">
+                        <h3 class="newsletter-title" style="color: #fff;">Weekly Updates</h3>
+                        <p class="newsletter-title-byline" style="color: #fff">DEPARTMENT OF MEDICINE</p>
+                    </div>
+                </section>
+                
+                <div class="twelve" style="margin-top: 20px">
+                    <!-- Grand Rounds -->
+                    <section class="wrapper last">
+                        <h6 class="section-title">Grand Rounds</h6>
+                        <div class="wrapper last">
+                            <div class="flex">
+                                <div class="three" style="margin-right: 20px">
+                                    <!-- <a href="http://medicinecalendars.stanford.edu/event/medicine-grand-rounds-with-nigam-shah/?instance_id=19660"> -->
+                                        <img class="story-image" height="130" width="130" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/52665818-64d7-4df9-a15f-72382b9db7f6.png">
+                                    <!-- </a> -->
+                                </div>
+                                <div class="nine">
+                                    <p class="pre-event">November 22 @ 8:00-9:00 am</p>
+                                    <p class="event-title">No Grand Rounds.</p>
+                                    <p class="event-blurb"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Latest News -->
+                    <section class="wrapper last">
+                        <h6 class="section-title">Latest News</h6>
+                        <div class="flex" style="flex-wrap: wrap">
+                            <!-- stories 1 & 2 -->
+                            <div class="six wrapper">
+                                <a href="http://scopeblog.stanford.edu/2017/11/14/examining-the-potential-benefits-of-canagliflozin-for-patients-with-diabetes/">
+                                    <img class="story-image" height="157.5" width="100%" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/f07e00c1-9c60-4c5c-8762-f34e2a3d74ef.jpg">
+                                </a>
+                                <p class="story-title"><a href="http://scopeblog.stanford.edu/2017/11/14/examining-the-potential-benefits-of-canagliflozin-for-patients-with-diabetes/"><span>Examining the potential benefits of canagliflozin for patients with diabetes.</span></a></p>
+                                <p class="story-blurb">For the 30 million Americans who have diabetes mellitus — including the more than 95 percent with type 2 diabetes —  lifestyle changes, technological advances, and new medical therapies promise to lessen their risk of developing some of the dire outcomes associated with their disease.</p>
+                            </div>
+                            <div class="six wrapper last">
+                                <a href="http://scopeblog.stanford.edu/2017/11/16/nanoparticles-help-track-human-heart-muscle-cells-in-mice-in-stanford-study/">
+                                    <img class="story-image" height="157.5" width="100%" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/75b12045-a3f9-4ea8-a68c-0f4831ed8e2c.png">
+                                </a>
+                                <p class="story-title"><a href="http://scopeblog.stanford.edu/2017/11/16/nanoparticles-help-track-human-heart-muscle-cells-in-mice-in-stanford-study/"><span>Nanoparticles help track human heart muscle cells in mice in Stanford study. </span></a></p>
+                                <p class="story-blurb">Here Stanford Cardiovascular Institute instructor Xulei Qin, PhD, and cardiologist Joseph C. Wu, MD, PhD, along with radiologist Heike Daldrup-Link used a new technique called photoacoustic imaging to visualize semiconducting polymer nanoparticles they’ve latched onto the cardiomyocytes (whose nuclei are shown in blue) like microscopic ankle bracelets.</p>
+                            </div>
+                            <!-- stories 3 & 4 -->
+                            <div class="six wrapper">
+                                <a href="http://med.stanford.edu/news/all-news/2017/11/attributes-of-high-value-oncology-primary-care-identified.html">
+                                    <img class="story-image" height="157.5" width="100%" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/0aed70e8-2dc5-4952-9800-41d9cc0661dc.png">
+                                </a>
+                                <p class="story-title"><a href="http://med.stanford.edu/news/all-news/2017/11/attributes-of-high-value-oncology-primary-care-identified.html"><span>Attributes of high-value oncology, primary care identified. </span></a></p>
+                                <p class="story-blurb">Two novel Stanford studies have uncovered attributes of high-quality, low-cost care for cancer and primary care patients.</p>
+                            </div>
+                            <div class="six wrapper last">
+                                <a href="http://med.stanford.edu/news/all-news/2017/11/stanford-scientists-among-those-funded-by-stand-up-to-cancer.html">
+                                    <img class="story-image" height="157.5" width="100%" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/5efb025c-7a94-4c4c-bb32-0b8119177698.png">
+                                </a>
+                                <p class="story-title"><a href="http://med.stanford.edu/news/all-news/2017/11/stanford-scientists-among-those-funded-by-stand-up-to-cancer.html"><span>Stanford scientists among those funded by Stand Up To Cancer. </span></a></p>
+                                <p class="story-blurb">Maximilian Diehn, Sanjiv “Sam” Gambhir, Ash Alizadeh and Young-Jun Jeon will work on “dream teams” aiming to improve detection of cancer.</p>
+                            </div>
+                            <!-- stories 5 & 6 -->
+                            <div class="six wrapper">
+                                <a href="http://medicine.stanford.edu/news/current-news/standard-news/Harrington-AHA.html">
+                                    <img class="story-image" height="157.5" width="100%" src="http://medicine.stanford.edu/news/current-news/standard-news/Harrington-AHA/_jcr_content/image.img.320.high.jpg">
+                                </a>
+                                <p class="story-title"><a href="http://medicine.stanford.edu/news/current-news/standard-news/Harrington-AHA.html"><span>Bob Harrington receives American Heart Association prestigious award. </span></a></p>
+                                <p class="story-blurb">Bob Harrington is the recipients of the AHA's Clinical Research Prize for 2017, which is given for outstanding achievement in clinical cardiovascular science…</p>
+                            </div>
+                            <div class="six wrapper last">
+                                <a href="http://medicine.stanford.edu/news/current-news/standard-news/introducing-the-stanford-vascular-medicine-fellowship-program.html">
+                                    <img class="story-image" height="157.5" width="100%" src="http://medicine.stanford.edu/news/current-news/standard-news/introducing-the-stanford-vascular-medicine-fellowship-program/_jcr_content/image.img.320.high.jpg">
+                                </a>
+                                <p class="story-title"><a href="http://medicine.stanford.edu/news/current-news/standard-news/introducing-the-stanford-vascular-medicine-fellowship-program.html"><span>Introducing the Stanford Vascular Medicine Fellowship Program. </span></a></p>
+                                <p class="story-blurb">We are excited to announce the Stanford Vascular Medicine Fellowship Program. This one-year non-interventional program aims to produce experts in arterial, venous and lymphatic diseases.</p>
+                            </div>
+                            <!-- stories 7 & 8 -->
+                            <div class="six wrapper">
+                                <a href="http://medicine.stanford.edu/news/current-news/standard-news/paul-bollyky-receives-falk-medical-trust-transformational-award.html">
+                                    <img class="story-image" height="157.5" width="100%" src="http://medicine.stanford.edu/news/current-news/standard-news/paul-bollyky-receives-falk-medical-trust-transformational-award/_jcr_content/image.img.320.high.jpg">
+                                </a>
+                                <p class="story-title"><a href="http://medicine.stanford.edu/news/current-news/standard-news/paul-bollyky-receives-falk-medical-trust-transformational-award.html"><span>Paul Bollyky receives Falk Medical Research Trust Transformation Award. </span></a></p>
+                                <p class="story-blurb">Paul Bollyky, MD, assistant professor of infectious diseases, has just received a Trust Transformational Award. The award is a $1 million grant over two years to continue research into treating and curing diseases.</p>
+                            </div>
+                            <div class="six wrapper last">
+                                <a href="http://medicine.stanford.edu/news/current-news/standard-news/Stanford-AZ-Grants.html">
+                                    <img class="story-image" height="157.5" width="100%" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/d9ddcb14-1799-4106-8367-f2120e999079.png">
+                                </a>
+                                <p class="story-title"><a href="http://medicine.stanford.edu/news/current-news/standard-news/Stanford-AZ-Grants.html"><span>Stanford-AstraZeneca collaboration research grants now inviting applications for year 3. </span></a></p>
+                                <p class="story-blurb">As part of the Stanford-AstraZeneca collaboration, Stanford Center for Clinical Research (SCCR) is excited to announce that the collaboration committee is now accepting applications for year three of the collaboration (2018-2019) to select up to two proposals for funding.</p>
+                            </div>
+                            <!-- stories 9 & 10 -->
+                            <div class="six wrapper">
+                                <a href="http://med.stanford.edu/news/all-news/2017/11/randall-stafford-on-new-blood-pressure-guidelines.html">
+                                    <img class="story-image" height="157.5" width="100%" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/3cbcf7cc-f8bf-4b9b-9994-36a4b5b4597c.png">
+                                </a>
+                                <p class="story-title"><a href="http://med.stanford.edu/news/all-news/2017/11/randall-stafford-on-new-blood-pressure-guidelines.html"><span>5 Questions: Randall Stafford on new blood pressure guidelines. </span></a></p>
+                                <p class="story-blurb">Under the new guidelines, tens of millions more Americans now meet the criteria for having high blood pressure.</p>
+                            </div>
+                            <div class="six wrapper last">
+                                <a href="http://scopeblog.stanford.edu/2017/11/13/in-study-inspired-by-late-stanford-physician-immunotherapy-found-safe-in-hiv-patients/">
+                                    <img class="story-image" height="157.5" width="100%" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/f07e00c1-9c60-4c5c-8762-f34e2a3d74ef.jpg">
+                                </a>
+                                <p class="story-title"><a href="http://scopeblog.stanford.edu/2017/11/13/in-study-inspired-by-late-stanford-physician-immunotherapy-found-safe-in-hiv-patients/"><span>In study inspired by late Stanford physician, immunotherapy found safe in HIV patients. </span></a></p>
+                                <p class="story-blurb">Results are in from a clinical trial conducted by the Cancer Immunotherapy Trials Network, based at Fred Hutchinson Cancer Research Center, inspired by the late Stanford physician Holbrook Kohrt, MD, PhD.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Upcoming Grant Rounds -->
+                    <section class="wrapper last">
+                        <h6 class="section-title">Upcoming Grant Rounds</h6>
+                        <div class="wrapper last" style="padding-bottom: 10px">
+                            <p class="pre-event">NOVEMBER 29 @ 8:00-9:00 AM</p>
+                            <p class="event-title"><a href="http://medicinecalendars.stanford.edu/event/medicine-grand-rounds-hepatitis-c/?instance_id=20590">Hepatitis C</a></p>
+                            <p class="event-blurb"><i>Speaker: Paul Kwo, MD and Jeffrey Glenn, MD,PhD</i></p>                                
+                        </div>
+                        <div class="wrapper last" style="padding-bottom: 10px">
+                            <p class="pre-event">DECEMBER 6 @ 8:00-9:00 AM</p>
+                            <p class="event-title"><a href="http://medicinecalendars.stanford.edu/event/medicine-grand-rounds-organ-transplantation/?instance_id=20691">Organ Transplantation Without Anti-Rejection Drugs</a></p>
+                            <p class="event-blurb"><i>Speaker: Samuel Strober, MD</i></p>                                
+                        </div>
+                    </section>
+
+                    <!-- Department Events -->
+                    <section class="wrapper last">
+                        <h6 class="section-title">Department Events</h6>
+                        <div class="wrapper last" style="padding-bottom: 10px">
+                            <p class="pre-event">November 20, 2017 @ 3:00 pm – 4:00 pm </p>
+                            <p class="event-title"><a href="http://medicinecalendars.stanford.edu/event/id-seminar-chronic-viral-infections-inflammation-and-aging-related-outcomes-contributions-of-hiv-observational-cohorts/?instance_id=20588">Viral Infections, Inflammation, and Aging-Related Outcomes â€“ Contributions of HIV Observational Cohorts. </a></p>
+                            <p class="event-blurb">ID Seminar: Chronic</p>                                  
+                        </div>
+                        <div class="wrapper last" style="padding-bottom: 10px">
+                            <p class="pre-event">November 21, 2017 @ 8:00 am – 9:00 am</p>
+                            <p class="event-title"><a href="http://medicinecalendars.stanford.edu/event/cancer-education-seminar-surgical-management-of-lung-cancer/?instance_id=20578">Surgical Management of Lung Cancer. </a></p>
+                            <p class="event-blurb">Cancer Education Seminar</p>                                
+                        </div>
+                    </section>
+
+                    <!-- Funding, Fellowship, and Employment Opportunities -->
+                    <section class="wrapper last">
+                        <h6 class="section-title">Department Events</h6>
+                        <div class="wrapper last" style="padding-bottom: 10px">
+                            <p><strong>Stanford-Coulter Translational Research Grants</strong><br>
+                                Deadline: <strong>February 16</strong><br>
+                                Proposals are now being accepted for Stanford-Coulter Translational Research Grant Program. 
+                                The program awards $800,000 a year to Bioengineering faculty members and their clinician researcher 
+                                collaborators from the School of Medicine. Together, these teams of co-investigators work to develop 
+                                new technologies that address unmet clinical needs, improve health care and lead to commercially available 
+                                products. <a href="https://bioengineering.stanford.edu/research/affiliate-programs/stanford-coulter-translational-research-grants/apply">Learn more</a>
+                            </p>                             
+                        </div>
+                    </section>
+
+                    <!-- Announcements -->
+                    <section class="wrapper last">
+                        <h6 class="section-title">Announcements »</h6>
+                        <div class="wrapper last">
+                            <ul>
+                                <li><p>View the latest edition of the Center for Digital Health’s newsletter. <a href="http://mailchi.mp/8980057cba31/cdh-newsletter-november?e=8eb7b9aaf9">Learn more</a></p></li>
+                                <li><p>The Stanford Health Care Communication Program is now offering a clinician communication &amp; leadership workshop called ACES (Advancing Communication Excellence at Stanford). This 8-hour workshop utilizes an evidence-based, relationship-centered communication model that is unique to clinicians, and is facilitated by our own Stanford faculty/staff. Registration is now open to all Physicians, NPs, and PAs at no cost. Workshops will take place throughout <strong>November</strong>. All workshop attendees are eligible to receive 7.5 CME Credit Hours. Interested? Register <a href="https://service-excellence.acuityscheduling.com/schedule.php?appointmentType=3435436">here</a>. And email <a href="mailto:physiciancoach@stanfordhealthcare.org">physiciancoach@stanfordhealthcare.org</a> with any questions.</p></li>
+                                <li><p>The Department of Medicine is participating in the second annual employee donation drive, called Cardinal at Work Cares Giving Campaign for families at the Ronald McDonald House and CityTeam homeless shelters. Our goal is to collect 300 new travel-sized deodorants as part of the university-wide goal to fulfill 1,200 personal care gift packs. Drop off your donation in collection bins located at Grant S-102 by <strong>December 1</strong>. </p></li>
+                                <li><p>AAMC will host a Mid-Career Women Faculty Professional Development Seminar in Scottsdale, Arizona, <strong>December 2-5</strong>. The seminar is a three-and-a-half-day program designed for women holding medical school appointments at the associate professor level, and holding leadership positions within their discipline, department or institution. Assistant professors and full professors may be considered based on experience. <a href="http://www.cvent.com/events/2017-mid-career-women-faculty-leadership-development-seminar/event-summary-c534f2140a924495acf8bb5cb83e0e5a.aspx">Learn more</a></p></li>
+                                <li><p>Save the date! The Department of Medicine holiday party will be held on <strong>December 13</strong>. RSVP via the Paperless Post invite that was sent out on November 1. <a href="http://medicinecalendars.stanford.edu/event/department-of-medicine-holiday-party/?instance_id=20300">Learn more</a></p></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- In the news -->
+                    <section class="wrapper last">
+                        <div class="panel">
+                            <h6 class="other-news-header">In the News</h6>
+                            <br>
+                            <div class="in-the-news-excerpt">
+                                <a href="https://www.medscape.com/viewarticle/888751"><span style="color: #2795b6 !important;">"High-value cancer care keeps costs down? Yes, it’s possible!"</span></a>
+                                <span>- This article references two studies lead by <b>Arnold Milstein</b>.</span>
+                                <p class="post-excerpt">Medscape</p>
+                            </div>
+                        </div>
+                    </section>
+                    <br>
+
+                    <!-- Twitter -->
+                    <section class="flex" style="padding-bottom: 10px;">
+                        <div class="four wrapper">
+                            <p class="story-title">Connect With Us <a style="color: #2BA6CB;" href="https://twitter.com/StanfordDeptMed">@StanfordDeptMed</a></p>
+                        </div>
+                        <div class="eight wrapper last">
+                            <a href="https://twitter.com/cgarzio/status/930975290162941955">
+                                <img class="story-image" width="auto" height="151" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/7ce51ab8-87e5-4a01-9830-9505dee06983.jpg">
+                            </a>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </main>
+
+        <footer class="container">
+            <ul class="flex">
+                <li><a href="*|ARCHIVE|*">View in browser</a> |&nbsp;</li>
+                <li><a href="http://medicine.stanford.edu/about/contact-us.html">Contact Us</a> |&nbsp;</li> 
+                <li><a href="*|UNSUB|*">Unsubscribe</a></li>
+            </ul>
+        </footer>
+
+    </body>
+</html>

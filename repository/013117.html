@@ -1,0 +1,1724 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width"/>
+
+    <style>
+
+        /* Client-specific Styles & Reset */
+
+        #outlook a { 
+            padding:0; 
+        } 
+
+        body { 
+            width:100% !important; 
+            min-width: 100%;
+            background-color: #F2F2F2;    
+            -webkit-text-size-adjust:100%; 
+            -ms-text-size-adjust:100%; 
+            margin:0; 
+            padding:0;
+        }
+
+        .ExternalClass { 
+            width:100%;
+        } 
+
+        .ExternalClass, 
+        .ExternalClass p, 
+        .ExternalClass span, 
+        .ExternalClass font, 
+        .ExternalClass td, 
+        .ExternalClass div { 
+            line-height: 100%; 
+        } 
+
+        #backgroundTable { 
+            margin:0; 
+            padding:0; 
+            width:100% !important; 
+            line-height: 100% !important; 
+        }
+
+        img { 
+            outline:none; 
+            text-decoration:none; 
+            -ms-interpolation-mode: bicubic;
+            width: auto;
+            max-width: 100%; 
+            float: left; 
+            clear: both; 
+            display: block;
+        }
+
+        img.story-image {
+            padding-bottom: 10px;
+        }
+
+        center {
+            width: 100%;
+            min-width: 580px;
+        }
+
+        a img { 
+            border: none;
+        }
+
+        p {
+            margin: 0 0 0 10px;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        td { 
+            word-break: break-word;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            hyphens: auto;
+            border-collapse: collapse !important; 
+        }
+
+        table, tr, td {
+            padding: 0;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        hr {
+            color: #d9d9d9; 
+            background-color: #d9d9d9; 
+            height: 1px; 
+            border: none;
+        }
+
+        hr.newsletter-title-line {
+            color: #d9d9d9; 
+            background-color: #d9d9d9;
+            height: 1px; 
+            border: none;
+        }
+
+        /*
+        p.announcement-link a {
+            color: #000;
+        }
+        */
+
+        /* Responsive Grid */
+
+        table.body {
+            height: 100%;
+            width: 100%;
+        }
+
+        table.container {
+            width: 620px;
+            margin: 0 auto;
+            text-align: inherit;
+        }
+
+        table.row { 
+            padding: 0px; 
+            width: 100%;
+            position: relative;
+        }
+
+        table.container table.row {
+            display: block;
+        }
+
+        td.wrapper {
+            padding: 10px 20px 0px 0px;
+            position: relative;
+        }
+
+        table.columns,
+        table.column {
+            margin: 0 auto;
+        }
+
+        table.columns td,
+        table.column td {
+            padding: 0px 0px 10px; 
+        }
+
+        table.columns td.sub-columns,
+        table.column td.sub-columns,
+        table.columns td.sub-column,
+        table.column td.sub-column {
+            padding-right: 10px;
+        }
+
+        td.sub-column, td.sub-columns {
+            min-width: 0px;
+        }
+
+        table.row td.last,
+        table.container td.last {
+            padding-right: 0px;
+        }
+
+        table.one { width: 30px; }
+        table.two { width: 80px; }
+        table.three { width: 130px; }
+        table.four { width: 180px; }
+        table.five { width: 230px; }
+        table.six { width: 280px; }
+        table.seven { width: 330px; }
+        table.eight { width: 380px; }
+        table.nine { width: 430px; }
+        table.ten { width: 480px; }
+        table.eleven { width: 530px; }
+        table.twelve { width: 580px; }
+
+        table.one center { min-width: 30px; }
+        table.two center { min-width: 80px; }
+        table.three center { min-width: 130px; }
+        table.four center { min-width: 180px; }
+        table.five center { min-width: 230px; }
+        table.six center { min-width: 280px; }
+        table.seven center { min-width: 330px; }
+        table.eight center { min-width: 380px; }
+        table.nine center { min-width: 430px; }
+        table.ten center { min-width: 480px; }
+        table.eleven center { min-width: 530px; }
+        table.twelve center { min-width: 580px; }
+
+        table.one .panel center { min-width: 10px; }
+        table.two .panel center { min-width: 60px; }
+        table.three .panel center { min-width: 110px; }
+        table.four .panel center { min-width: 160px; }
+        table.five .panel center { min-width: 210px; }
+        table.six .panel center { min-width: 260px; }
+        table.seven .panel center { min-width: 310px; }
+        table.eight .panel center { min-width: 360px; }
+        table.nine .panel center { min-width: 410px; }
+        table.ten .panel center { min-width: 460px; }
+        table.eleven .panel center { min-width: 510px; }
+        table.twelve .panel center { min-width: 560px; }
+
+        .body .columns td.one,
+        .body .column td.one { width: 8.333333%; }
+        .body .columns td.two,
+        .body .column td.two { width: 16.666666%; }
+        .body .columns td.three,
+        .body .column td.three { width: 25%; }
+        .body .columns td.four,
+        .body .column td.four { width: 33.333333%; }
+        .body .columns td.five,
+        .body .column td.five { width: 41.666666%; }
+        .body .columns td.six,
+        .body .column td.six { width: 50%; }
+        .body .columns td.seven,
+        .body .column td.seven { width: 58.333333%; }
+        .body .columns td.eight,
+        .body .column td.eight { width: 66.666666%; }
+        .body .columns td.nine,
+        .body .column td.nine { width: 75%; }
+        .body .columns td.ten,
+        .body .column td.ten { width: 83.333333%; }
+        .body .columns td.eleven,
+        .body .column td.eleven { width: 91.666666%; }
+        .body .columns td.twelve,
+        .body .column td.twelve { width: 100%; }
+
+        td.offset-by-one { padding-left: 50px; }
+        td.offset-by-two { padding-left: 100px; }
+        td.offset-by-three { padding-left: 150px; }
+        td.offset-by-four { padding-left: 200px; }
+        td.offset-by-five { padding-left: 250px; }
+        td.offset-by-six { padding-left: 300px; }
+        td.offset-by-seven { padding-left: 350px; }
+        td.offset-by-eight { padding-left: 400px; }
+        td.offset-by-nine { padding-left: 450px; }
+        td.offset-by-ten { padding-left: 500px; }
+        td.offset-by-eleven { padding-left: 550px; }
+
+        td.expander {
+            visibility: hidden;
+            width: 0px;
+            padding: 0 !important;
+        }
+
+        table.columns .text-pad,
+        table.column .text-pad {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        table.columns .left-text-pad,
+        table.columns .text-pad-left,
+        table.column .left-text-pad,
+        table.column .text-pad-left {
+            padding-left: 20px;
+        }
+
+
+        table.columns .middle-text-pad,
+        table.column .middle-text-pad {
+            padding-left: 10px;
+        }
+
+        table.columns .right-text-pad,
+        table.columns .text-pad-right,
+        table.column .right-text-pad,
+        table.column .text-pad-right {
+            padding-right: 20px;
+        }
+
+        table.columns .middle-text-pad,
+        table.column .middle-text-pad {
+            padding-right: 10px;
+        }
+
+        /* Block Grid */
+
+        .block-grid {
+            width: 100%;
+            max-width: 580px;
+        }
+
+        .block-grid td {
+            display: inline-block;
+            padding:10px;
+        }
+
+        .two-up td {
+            width:270px;
+        }
+
+        .three-up td {
+            width:173px;
+        }
+
+        .four-up td {
+            width:125px;
+        }
+
+        .five-up td {
+            width:96px;
+        }
+
+        .six-up td {
+            width:76px;
+        }
+
+        .seven-up td {
+            width:62px;
+        }
+
+        .eight-up td {
+            width:52px;
+        }
+
+        /* Alignment & Visibility Classes */
+
+        table.center, td.center {
+            text-align: center;
+        }
+
+        h1.center,
+        h2.center,
+        h3.center,
+        h4.center,
+        h5.center,
+        h6.center {
+            text-align: center;
+        }
+
+        span.center {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        img.center {
+            margin: 0 auto;
+            float: none;
+        }
+
+        .show-for-small,
+        .hide-for-desktop {
+            display: none;
+        }
+
+        /* Typography */
+
+        body, table.body, h1, h2, h3, h4, h5, h6, p, td { 
+            color: #222222;
+            font-family:"Helvetica", "Arial", "sans serif";
+            font-weight: normal; 
+            padding:0; 
+            margin: 0;
+            text-align: left; 
+            line-height: 1.3;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            word-break: normal;
+        }
+
+        h1 {font-size: 40px;}
+        h2 {font-size: 36px;}
+        h3 {font-size: 32px;}
+        h4 {font-size: 28px;}
+        h5 {font-size: 24px;}
+        h6 {font-size: 20px;}
+
+        h6.section-title {
+            font-size: 18px; 
+            font-weight: 800;
+            font-family: "Georgia","serif";
+        }
+
+        h6.other-news-header {
+            font-family: "Georgia","serif";
+        }
+
+        h3.newsletter-title {
+            font-family: "Times","serif";
+            text-align: center;
+        }
+
+        p.story-title {
+            color: #8B1515;
+            font-size: 18px; 
+            line-height: 22px;
+            margin-bottom: 0;
+        }
+
+        p.event-title {
+            color: #666666;
+            font-size: 14px; 
+            line-height: 18px;
+            margin-bottom: 0;
+        }
+
+        p.event-title a {
+            color: #666666;
+            font-size: 14px; 
+            line-height: 18px;
+            margin-bottom: 0;
+        }
+
+        p.event-title a span {
+            color: #666666;
+            font-size: 14px; 
+            line-height: 18px;
+            margin-bottom: 0;
+        }
+
+        p.story-title a span {
+            color: #8B1515;
+            font-size: 18px; 
+            line-height: 22px;
+            margin-bottom: 0;
+        }
+
+        p.story-blurb {
+            color: #505050;
+        }
+
+        body, table.body, p, td {font-size: 13px;line-height:18px;}
+
+        p.lead, p.lede, p.leed {
+            font-size: 18px;
+            line-height:21px;
+        }
+
+        p { 
+            margin-bottom: 10px;
+        }
+
+        small {
+            font-size: 10px !important;
+        }
+
+        a {
+            color: #2ba6cb; 
+            text-decoration: none;
+        }
+
+        a:hover { 
+            color: #2795b6 !important;
+        }
+
+        a:active { 
+            color: #000 !important;
+        }
+
+        a:visited { 
+            color: #000 !important;
+        }
+
+        h1 a, 
+        h2 a, 
+        h3 a, 
+        h4 a, 
+        h5 a, 
+        h6 a {
+            color: #2ba6cb;
+        }
+
+        h1 a:active, 
+        h2 a:active,  
+        h3 a:active, 
+        h4 a:active, 
+        h5 a:active, 
+        h6 a:active { 
+            color: #000 !important; 
+        } 
+
+        h1 a:visited, 
+        h2 a:visited,  
+        h3 a:visited, 
+        h4 a:visited, 
+        h5 a:visited, 
+        h6 a:visited { 
+            color: #000 !important; 
+        } 
+
+        .newsletter-title-byline {
+            text-align: center;
+            font-size: 14px;
+            line-height:17px;
+            color:#fff;
+            text-transform: uppercase;
+        }
+
+        .centered-notes-title h6 {
+            font-family: "Georgia","serif";
+            text-transform: uppercase;
+            border-bottom: 1px solid #8C1515;
+            padding-bottom: 5px;
+        }
+
+        .centered-news-title h6 {
+            font-family: "Georgia","serif";
+            text-transform: uppercase;
+            border-top: 1px solid #00505C;
+            padding-top: 5px;
+        }
+
+        .centered-events-title h6 {
+            font-family: "Georgia","serif";
+            text-transform: uppercase;
+            border-bottom: 1px solid #00505C;
+            padding-bottom: 5px;
+        }
+
+        .in-the-news-excerpt a {
+            font-size: 11px;
+        }
+
+        .in-the-news-excerpt span {
+            font-size: 11px;
+            color: #000;
+        }
+
+        span.event-date {
+            font-family:"Arial Black", "Arial", "sans serif";
+        }
+
+        p.pre-event {
+            font-size: 11px;
+            color: #09425a;
+            text-transform: uppercase;
+            text-decoration:none;
+            letter-spacing: 0px;
+            margin-bottom: 0px;
+        }
+
+        p.post-excerpt {
+            margin: 1px 0px 0px;
+            color: #505050;
+            font-family: "Helvetica","sans serif";
+            font-size: 10px;
+            line-height: 13px;
+        }
+
+        p.event-blurb {
+            font-family: "Helvetica","sans serif";
+            color: #505050;
+            font-size: 11px;        
+        }
+
+        p.sub-event-header {
+            text-transform: uppercase; 
+            color: #4D4D4D; 
+            text-align: left;
+            font-size: 14.5px;
+        }
+
+        /* Panels */
+
+        .panel {
+            background: #f2f2f2;
+            border: 1px solid #d9d9d9;
+            padding: 10px !important;
+        }
+
+        .sub-grid table {
+            width: 100%;
+        }
+
+        .sub-grid td.sub-columns {
+            padding-bottom: 0;
+        }
+
+        /* Buttons */
+
+        table.button,
+        table.tiny-button,
+        table.small-button,
+        table.medium-button,
+        table.large-button {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        table.button td,
+        table.tiny-button td,
+        table.small-button td,
+        table.medium-button td,
+        table.large-button td {
+            display: block;
+            width: auto !important;
+            text-align: center;
+            background: #2ba6cb;
+            border: 1px solid #2284a1;
+            color: #ffffff;
+            padding: 8px 0;
+        }
+
+        table.tiny-button td {
+            padding: 5px 0 4px;
+        }
+
+        table.small-button td {
+            padding: 8px 0 7px;
+        }
+
+        table.medium-button td {
+            padding: 12px 0 10px;
+        }
+
+        table.large-button td {
+            padding: 21px 0 18px;
+        }
+
+        table.button td a,
+        table.tiny-button td a,
+        table.small-button td a,
+        table.medium-button td a,
+        table.large-button td a {
+            font-weight: bold;
+            text-decoration: none;
+            font-family: Helvetica, Arial, sans-serif;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        table.tiny-button td a {
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        table.small-button td a {
+            font-size: 16px;
+        }
+
+        table.medium-button td a {
+            font-size: 20px;
+        }
+
+        table.large-button td a {
+            font-size: 24px;
+        }
+
+        table.button:hover td,
+        table.button:visited td,
+        table.button:active td {
+            background: #2795b6 !important;
+        }
+
+        table.button:hover td a,
+        table.button:visited td a,
+        table.button:active td a {
+            color: #fff !important;
+        }
+
+        table.button:hover td,
+        table.tiny-button:hover td,
+        table.small-button:hover td,
+        table.medium-button:hover td,
+        table.large-button:hover td {
+            background: #2795b6 !important;
+        }
+
+        table.button:hover td a,
+        table.button:active td a,
+        table.button td a:visited,
+        table.tiny-button:hover td a,
+        table.tiny-button:active td a,
+        table.tiny-button td a:visited,
+        table.small-button:hover td a,
+        table.small-button:active td a,
+        table.small-button td a:visited,
+        table.medium-button:hover td a,
+        table.medium-button:active td a,
+        table.medium-button td a:visited,
+        table.large-button:hover td a,
+        table.large-button:active td a,
+        table.large-button td a:visited {
+            color: #ffffff !important; 
+        }
+
+        table.secondary td {
+            background: #e9e9e9;
+            border-color: #d0d0d0;
+            color: #555;
+        }
+
+        table.secondary td a {
+            color: #555;
+        }
+
+        table.secondary:hover td {
+            background: #d0d0d0 !important;
+            color: #555;
+        }
+
+        table.secondary:hover td a,
+        table.secondary td a:visited,
+        table.secondary:active td a {
+            color: #555 !important;
+        }
+
+        table.success td {
+            background: #5da423;
+            border-color: #457a1a;
+        }
+
+        table.success:hover td {
+            background: #457a1a !important;
+        }
+
+        table.alert td {
+            background: #c60f13;
+            border-color: #970b0e;
+        }
+
+        table.alert:hover td {
+            background: #970b0e !important;
+        }
+
+        table.radius td {
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        table.round td {
+            -webkit-border-radius: 500px;
+            -moz-border-radius: 500px;
+            border-radius: 500px;
+        }
+
+        /* Outlook First */
+
+        body.outlook p {
+            display: inline !important;
+        }
+
+        .newsletter-date {
+            color: #000;
+            font-weight: bold;
+            font-size: 10px;
+        }
+
+        .callout .panel {
+            background: #ECF8FF;
+            border-color: #b9e5ff;
+        }
+
+        .header {
+            background: #FFF;
+        }
+
+        .footer .wrapper {
+            background: #ebebeb;
+        }
+
+        .footer h5 {
+            padding-bottom: 10px;
+        }
+
+        table.columns .text-pad {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        table.columns .left-text-pad {
+            padding-left: 20px;
+        }
+
+        table.columns .right-text-pad {
+            padding-right: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+	<table class="body">
+		<tr>
+			<td class="center" align="center" valign="top">
+                <center>
+
+                    <table class="row header">
+                        <tr>
+                            <td class="center" align="center">
+                                <center>
+
+                                    <table class="container">
+                                        <tr>
+                                            <td class="wrapper last">
+
+                                                <table class="twelve columns">
+                                                    <tr>
+                                                        <td class="six sub-columns">
+                                                            <img width="200" height="31" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/8b6142d6-db3f-4a2e-a96f-8ae0e29f4f2d.png">
+                                                        </td>
+                                                        <td class="six sub-columns last" style="text-align:right; vertical-align:middle;">
+                                                            <span class="newsletter-date">TUESDAY, JANUARY 31, 2017</span>
+                                                        </td>
+                                                        <td class="expander"></td>
+                                                    </tr>
+                                                </table>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="container" style="background: #FFF; margin-top: 20px !important; margin-bottom: 20px !important;">
+                        <tr>
+                            <td style="background-color: #8c1515; padding-left:20px !important; padding-right: 20px !important;">
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <h3 class="newsletter-title" style="color:#fff;">Weekly Updates</h3>
+                                                        <p class="newsletter-title-byline" style="text-align:center;">Department of Medicine</p>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+
+                                    </tr>
+                                </table>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td style="background-color: ; padding-left:20px !important; padding-right: 20px !important;">
+
+                                <br>
+
+                                    
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <h6 class="section-title" style="border-bottom: 2px solid #000; padding: 0 0px 10px;">Grand Rounds</h6>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper">
+                                            <table class="three columns">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://medicinecalendars.stanford.edu/event/medicine-grand-rounds-with-nigam-shah/?instance_id=19660">
+                                                            <img class="story-image" height="130" width="130" src="https://cap.stanford.edu/profiles/viewImage?profileId=19142&type=square">
+                                                        </a>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td class="wrapper last">
+                                            
+                                            <table class="nine columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="pre-event">February 1 @ 8:00-9:00 am</p>
+                                                        <p class="event-title"><a href="http://medicinecalendars.stanford.edu/event/medicine-grand-rounds-with-nigam-shah/?instance_id=19660">Performing an Informatics Consult</a></p>
+                                                        <p class="event-blurb">Nigam Shah, MBBS, PhD</p>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <h6 class="section-title" style="border-bottom: 2px solid #000; padding: 0 0px 10px;">Latest News</h6>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="story-title"><span>Many students, faculty, and staff have been impacted by the recent executive order. Here are several resources for the Stanford community:</span></p>
+                                                        <p class="story-blurb">Community letter from Stanford leadership on immigration. <a href="http://news.stanford.edu/2017/01/28/community-letter-stanford-leadership-immigration/">View story</a></p>
+                                                        <p class="story-blurb">Stanford’s support for our international and undocumented community. <a href="http://news.stanford.edu/2017/01/29/stanfords-support-international-undocumented-community/">View story</a></p>
+                                                        <p class="story-blurb">Information for international students and scholars who may be affected by the immigration ban. <a href="https://stanford.app.box.com/s/pq6loi2iru099ei87y2z0l46qegvbffo">View here</a></p>
+                                                        <p class="story-blurb">An informational meeting will be held on February 2 for citizens of the countries designated in the executive order and other members of the Stanford Muslim community, featuring representatives from the Bechtel International Center, Stanford Law School’s Immigrants’ Rights Clinic, the Markaz and others who will provide information and answer questions. The Bechtel Center will also be using their <a href="https://www.facebook.com/BechtelInternationalCenter/">Facebook page</a> to quickly disseminate information and updates. <a href="https://law.stanford.edu/event/know-information-stanford-community-members-affected-muslim-ban/">Learn more</a></p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper">
+                                            <table class="six columns">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://medicine.stanford.edu/news/current-news/standard-news/IMPACT-study-diabetes-and-exercise.html">
+                                                            <img class="story-image" height="157.5" width="280" src="http://medicine.stanford.edu/news/current-news/standard-news/IMPACT-study-diabetes-and-exercise/_jcr_content/image.img.320.high.jpg">
+                                                        </a>
+                                                        <p class="story-title"><a href="http://medicine.stanford.edu/news/current-news/standard-news/IMPACT-study-diabetes-and-exercise.html"><span>Type 2 diabetes patients and exercise: How much of what kind?</span></a></p>
+                                                        <p class="story-blurb">Our mental picture of the usual “adult-onset” diabetic encompasses a sedentary lifestyle, a fondness for simple carbohydrates and all things sweet, and a body habitus that can range from overweight to morbidly obese.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td class="wrapper last">
+                                            <table class="six columns">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://medicine.stanford.edu/news/current-news/standard-news/GoRedForWomenDay.html">
+                                                            <img class="story-image" height="157.5" width="280" src="http://medicine.stanford.edu/news/current-news/standard-news/GoRedForWomenDay/_jcr_content/image.img.320.high.jpeg">
+                                                        </a>
+                                                        <p class="story-title"><a href="http://medicine.stanford.edu/news/current-news/standard-news/GoRedForWomenDay.html"><span>Wear red on February 3 to raise awareness for women’s heart health</span></a></p>
+                                                        <p class="story-blurb">This Friday, Feb. 3, is National Wear Red Day. Organized by the American Heart Association and the National Heart, Lung and Blood Institute, Wear Red Day aims to raise awareness of women’s heart health.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper">
+                                            <table class="six columns">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://scopeblog.stanford.edu/2017/01/25/doctor-at-womens-march-i-marched-to-make-sure-my-patients-voices-would-be-heard/">
+                                                            <img class="story-image" height="157.5" width="280" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/cfe555d9-2e61-44dd-b044-03b0dd4d030c.png">
+                                                        </a>
+                                                        <p class="story-title"><a href="http://scopeblog.stanford.edu/2017/01/25/doctor-at-womens-march-i-marched-to-make-sure-my-patients-voices-would-be-heard/"><span>Doctor at Women’s March: “I wanted to make sure my patients’ voices would be heard.”</span></a></p>
+                                                        <p class="story-blurb">"… I walked to represent my patients and their families who in many cases are in danger of losing access to high quality healthcare that was ushered in by the Affordable Care Act."</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td class="wrapper last">
+                                            <table class="six columns">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://med.stanford.edu/news/all-news/2017/01/five-faculty-elected-to-american-society-for-clinical-investigation.html">
+                                                            <img class="story-image" height="157.5" width="280" src="http://med.stanford.edu/news/all-news/2017/01/five-faculty-elected-to-american-society-for-clinical-investigation/_jcr_content/image.img.320.high.jpg">
+                                                        </a>
+                                                        <p class="story-title"><a href="http://med.stanford.edu/news/all-news/2017/01/five-faculty-elected-to-american-society-for-clinical-investigation.html"><span>Five researchers elected to American Society for Clinical Investigation</span></a></p>
+                                                        <p class="story-blurb">Ash Alizadeh, Maximilian Diehn, Brian Feldman, Aida Habtezion and Ravindra Majeti were elected to the medical honor society.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper">
+                                            <table class="six columns">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://globalhealth.stanford.edu/news/winning-water-funding-awarded-revitalize-urban-slums.html">
+                                                            <img class="story-image" height="157.5" width="280" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/436ce5fc-8e5a-4eda-aa2c-7806c6def244.jpg">
+                                                        </a>
+                                                        <p class="story-title"><a href="http://globalhealth.stanford.edu/news/winning-water-funding-awarded-revitalize-urban-slums.html"><span>Winning with water: Funding awarded to revitalize urban slums</span></a></p>
+                                                        <p class="story-blurb">Stanford’s Stephen Luby to direct health evaluation of prestigious research collaboration led by Monash University to revitalize slums through water management strategies.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td class="wrapper last">
+                                            <table class="six columns">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://www.abcsforglobalhealth.org/?p=248">
+                                                            <img class="story-image" height="157.5" width="280" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/41b09cfc-056a-43f7-b70e-0ef3bc6f31f8.jpeg">
+                                                        </a>
+                                                        <p class="story-title"><a href="http://www.abcsforglobalhealth.org/?p=248"><span>Julieta Gabiola discusses the launch of a new mobile clinic in the Philippines</span></a></p>
+                                                        <p class="story-blurb">I started off poor growing up in Pampanga and helping my mom selling coconuts and malagkit . I also sold garlic, onions and plastic carrying a “bilao ” Went to Juliana elementary school then two years of high school at then the Assumption Academy near the palengke. Then transferred to Pampanga High school as I felt like an outsider at Assumption being from a poor family.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper">
+                                            <table class="six columns">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://med.stanford.edu/news/all-news/2017/01/recipients-of-global-health-seed-grants-announced.html">
+                                                            <img class="story-image" height="157.5" width="280" src="http://med.stanford.edu/news/all-news/2017/01/recipients-of-global-health-seed-grants-announced/_jcr_content/image.img.320.high.jpg">
+                                                        </a>
+                                                        <p class="story-title"><a href="http://med.stanford.edu/news/all-news/2017/01/recipients-of-global-health-seed-grants-announced.html"><span>Recipients of global health seed grants announced</span></a></p>
+                                                        <p class="story-blurb">The Stanford Center for Innovation in Global Health has awarded funding to six multidisciplinary research teams to jump-start novel efforts to address global health challenges.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td class="wrapper last">
+                                            <table class="six columns">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://scopeblog.stanford.edu/2017/01/23/cancer-survivors-brother-takes-on-death-ride-to-benefit-breast-cancer-research/">
+                                                            <img class="story-image" height="157.5" width="280" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/40e1bed8-3af1-45e5-a274-73a4a7fc5bb8.jpg">
+                                                        </a>
+                                                        <p class="story-title"><a href="http://scopeblog.stanford.edu/2017/01/23/cancer-survivors-brother-takes-on-death-ride-to-benefit-breast-cancer-research/"><span>Cancer survivor’s brother takes on “Death Ride” to benefit breast cancer research</span></a></p>
+                                                        <p class="story-blurb">“I don’t think I can finish,” Rakesh Marwah, MD, said to himself. Marwah, a Stanford anesthesiologist, was inching his bicycle up the third of five mountain passes in one of the most physically demanding cycling events in the U.S. when the absurdity of his situation dawned on him.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper">
+                                            <table class="six columns">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://scopeblog.stanford.edu/2017/01/24/new-ban-on-u-s-aid-to-family-planning-groups-could-have-unintended-consequences/">
+                                                            <img class="story-image" height="157.5" width="280" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/f07e00c1-9c60-4c5c-8762-f34e2a3d74ef.jpg">
+                                                        </a>
+                                                        <p class="story-title"><a href="http://scopeblog.stanford.edu/2017/01/24/new-ban-on-u-s-aid-to-family-planning-groups-could-have-unintended-consequences/"><span>New ban on U.S. aid to family planning groups could have unintended consequences</span></a></p>
+                                                        <p class="story-blurb">The Trump administration’s reinstatement of a policy that bans U.S. foreign aid to agencies that provide abortion counseling abroad was a predictable move that could have unintended consequences, Stanford researchers say.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td class="wrapper last">
+                                            <table class="six columns">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://scopeblog.stanford.edu/2017/01/24/autoimmunity-and-cancer-flip-sides-of-the-same-coin/">
+                                                            <img class="story-image" height="157.5" width="280" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/497ac2a6-f61d-4c92-983d-5885f5bce508.jpg">
+                                                        </a>
+                                                        <p class="story-title"><a href="http://scopeblog.stanford.edu/2017/01/24/autoimmunity-and-cancer-flip-sides-of-the-same-coin/"><span>Autoimmunity and cancer: Flip sides of the same coin?</span></a></p>
+                                                        <p class="story-blurb">Many patients with cancer are now treated with “checkpoint inhibitors.” These new drugs release molecular brakes that ordinarily keep immune cells from running amok and damaging healthy tissues.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+                                            <table class="six columns">
+                                                <tr>
+                                                    <td>
+                                                        <a href="http://medicine.stanford.edu/news/current-news/standard-news/residencyatstanford/Maggie.html">
+                                                            <img class="story-image" height="157.5" width="280" src="http://medicine.stanford.edu/news/current-news/standard-news/residencyatstanford/Maggie/_jcr_content/image.img.320.high.jpg">
+                                                        </a>
+                                                        <p class="story-title"><a href="http://medicine.stanford.edu/news/current-news/standard-news/residencyatstanford/Maggie.html"><span>The Pharmacist: Maggie Ning</span></a></p>
+                                                        <p class="story-blurb">“Stanford stands for innovation and inspiration to me, and I want to be a part of this culture. I also want to live in a place that is just breathtakingly beautiful with plenty of things to do."</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>               
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <h6 class="section-title" style="border-bottom: 2px solid #000; padding: 0 0px 10px;">Upcoming Grand Rounds</h6>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="pre-event">February 8 @ 8:00-9:00 am</p>
+                                                        <p class="event-title"><a href="http://medicinecalendars.stanford.edu/event/medicine-grand-rounds-discovery-leadership-lessons-from-challenging-situations/?instance_id=19709">Discovery: Leadership Lessons from Challenging Situations</a></p>
+                                                        <p class="event-blurb">Medicine Grand Rounds</p>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>      
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="pre-event">February 15 @ 8:00-9:00 am</p>
+                                                        <p class="event-title"><a href="http://medicinecalendars.stanford.edu/event/medicine-grand-rounds-with-michael-pignone/?instance_id=19711">Colorectal Cancer: 2017 Update</a></p>
+                                                        <p class="event-blurb">Medicine Grand Rounds</p>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>                                                                                             
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <h6 class="section-title" style="border-bottom: 2px solid #000; padding: 0 0px 10px;">Department Events</h6>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="pre-event">January 31 @ 8:00-9:00 am</p>
+                                                        <p class="event-title"><a href="http://medicinecalendars.stanford.edu/event/cancer-education-seminar-immunotherapy-treatments-for-lymphoma/?instance_id=19663">Immunotherapy Treatments for Lymphoma</a></p>
+                                                        <p class="event-blurb">Cancer Education Seminar</p>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>         
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="pre-event">January 31 @ 8:00-9:00 am</p>
+                                                        <p class="event-title"><a href="http://medicinecalendars.stanford.edu/event/palliative-care-grand-rounds-2/?instance_id=19669">The Birds Do It and the Bees Do It, So Why Can’t We Talk about It? Sexuality and Intimacy in Serious Illness and at the End of Life</a></p>
+                                                        <p class="event-blurb">Palliative Care Grand Rounds</p>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="pre-event">January 31 @ 4:15-5:15 pm</p>
+                                                        <p class="event-title"><a href="http://medicinecalendars.stanford.edu/event/special-oncology-seminar-for-better-or-for-worse-immune-modulation-of-pancreatic-cancer/?instance_id=19685">For Better or For Worse: Immune Modulation of Pancreatic Cancer</a></p>
+                                                        <p class="event-blurb">Special Oncology Seminar</p>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="pre-event">February 2 @ 8:00-9:00 am</p>
+                                                        <p class="event-title"><a href="http://medicinecalendars.stanford.edu/event/division-of-cardiovascular-medicine-cardiology-grand-rounds-6/?instance_id=19673">Optimizing Care and Outcomes for Heart Failure</a></p>
+                                                        <p class="event-blurb">Cardiology Grand Rounds</p>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="pre-event">February 2 @ 12:00-1:00 pm</p>
+                                                        <p class="event-title"><a href="http://medicinecalendars.stanford.edu/event/bmir-research-in-progress-marcos-martinez-romero-cedars-predictive-data-entry-easier-and-faster-creation-of-high-quality-metadata/?instance_id=19707">CEDAR’s Predictive Data Entry – Easier and Faster Creation of High Quality Metadata</a></p>
+                                                        <p class="event-blurb">BMIR Research in Progress</p>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                             
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper last">
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <h6 class="section-title" style="border-bottom: 2px solid #000; padding: 0 0px 10px;">Funding and Fellowship Opportunities</h6>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+
+                                        <td class="wrapper last">
+
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="story-blurb">The Stanford Catalyst for Collaborative Solutions is a new initiative with a bold mission – to create an open space to explore uncommon interdisciplinary solutions to our world’s most pressing problems and to become an internationally recognized model of a purposeful, high-impact, and interdisciplinary research ecosystem. The Catalyst Collaborative is seeking to fund two interdisciplinary project teams during their pilot year, each receiving $3 million over 3 years. The Catalyst will be holding several small interactive workshops throughout the month of <strong>February</strong> to help interested applicants identify potential team partners and refine research ideas. <a href="https://catalyst.stanford.edu/">Learn more</a>.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+        
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+
+                                        <td class="wrapper last">
+
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="story-blurb">Spectrum Child Health is accepting proposals through <b>February 1</b> for their Stanford Child Health Research Institute Clinical Trainee Awards. The awards support MD or MD/PhD fellows for up to 100% salary for up to two years. Applicants must Demonstrate a commitment to an investigative career in obstetrics, pediatrics, pediatric subspecialty or subspecialty primarily focused on child health (e.g., pediatric surgery). <a href="http://med.stanford.edu/chri.html">Learn more</a>.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+        
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+
+                                        <td class="wrapper last">
+
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="story-blurb">Proposals are being accepted now through <strong>February 3</strong> for Stanford Alzheimer’s Disease Research Center Pilot Projects. Applicants may request up to $50K in direct costs for a one-year duration project under this program. The Center plans to fund two projects. Any Stanford faculty with PI Eligibility may apply. Proposals should describe innovative basic, clinical, behavioral, translational, or epidemiologic research likely to advance an understanding of the basic and clinical underpinnings of Alzheimer’s disease and related disorders (including Parkinson’s disease and Lewy body disease); aid in prevention or treatment; or enhance caregiving, community outreach and education. Programmatic questions should be directed to Dr. Tony Wyss-Coray, chair of the Pilot Project Review Committee (twc@stanford.edu), administrative questions to Nusha Askari (askarin@stanford.edu), Senior Administrator of the ADRC. <a href="http://med.stanford.edu/rmg/funding/ADRC_pilot_projects.html">Learn more</a>.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+        
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+
+                                        <td class="wrapper last">
+
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="story-blurb">The San Mateo Probation Department is soliciting proposals through <strong>February 14</strong> for their Youth and Family Program and their Youth Activities and Mental Health Services. The County is interested in evidence-based or promising practice youth and family programs that promote resiliency, pro-social behavior, and emotional wellbeing. <a href="http://hr.smcgov.org/sites/hr.smcgov.org/files/documents/files/YouthandFamilyPrograms RFP_FINAL.pdf">Learn more</a>.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+        
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+
+                                        <td class="wrapper last">
+
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="story-blurb">Applications for the Coulter Translational Grant Program are due <strong>February 15</strong>. The program provides $100,000 grants for translational projects in medical devices, diagnostics, mobile health and biotechnology, with desirable outcomes including commercial products, licenses and start-up companies. <a href="https://bioengineering.stanford.edu/research/affiliate-programs/stanford-coulter-translational-research-grants">Learn more</a>.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+        
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+
+                                        <td class="wrapper last">
+
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="story-blurb">Stanford is accepting applications through <strong>February 22</strong> for the David and Lucile Packard Fellowships for Science and Engineering. Recipients receive $875,000 over five years. All applicants must be faculty members who are in the first three years of their faculty careers (assistant professors with PI eligibility). Submit all School of Medicine applications to Jeanne Heschele at <a href="mailto:jheschele@stanford.edu">jheschele@stanford.edu</a>. <a href="https://www.packard.org/what-we-fund/conservation-and-science/science/packard-fellowships-for-science-and-engineering/about-the-packard-fellowship-awards/">Learn more</a>.</p>
+
+                                                        <p>Submission Guidelines:</p>
+                                                        <p>File name: Last name_Packard_2017.pdf</p>
+                                                        <ol>
+                                                            <li>Title Page: The David and Lucile Packard Foundation Fellowships for Science and Engineering, Proposal title, Name of the PI, title, department, address, phone, email</li>
+                                                            <li>Letter of recommendation printed on your department letterhead signed by either your Division Chief or your Department Chair addressed per the following (according to your School). This letter should describe first hand knowledge of the nominee's ability to do creative research. Nominees with a joint appointment can submit one letter signed by both department chairs. School of Medicine: address your letter to Dr. Peter Sarnow and the School of Medicine Awards commitee members c/o Jeanne Heschele</li>
+                                                            <li>Research Statement (based on the sponsor's guidelines) The research statement is limited to 1,400 words (maximum two pages of text, prepared in 12- point font with 1-inch margins). If there are relevant figures, images or references, please include these separately on a third page. Research Statement by nominee on why the research is important, outlining general goals for the next five years. Include general statement of how funds will be spent. This does not need to be a detailed budget and will not be binding on the actual use of funds.</li>
+                                                            <li>PI Biosketch</li>
+                                                            <li>List of ALL support, current and pending. Include sponsor name, term, amount of funding, etc.</li>
+                                                        </ol>
+
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+        
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+
+                                        <td class="wrapper last">
+
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="story-blurb">Internal funding opportunity: The Stanford Center for Digital Health is soliciting applications through <strong>February 26</strong> for its inaugural seed grant program focused on the innovative uses of the Apple Watch in healthcare. Recipients will receive Apple Watches and a grant of up to $10,000 in direct costs. <a href="http://med.stanford.edu/cdh/opportunities/apple-watch-seed-grant.html">Learn more</a>.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+        
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+
+                                        <td class="wrapper last">
+
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="story-blurb">Applications are being accepted through <b>March 1</b> for Spectrum’s KL2/TL1 Training Awards. The awards are career mentored training awards for junior faculty, fellows, residents, medical and doctoral students providing both tuition and salary support with an emphasis on education and training in clinical and translational research. The KL2 Program is especially designed for senior fellows and junior faculty, and provides complete tuition support and partial salary support (75%) for a period of 2 years. The TL1 Program would serve your pre-doctoral and post-doctoral awardees who seek formal training in CTR-related methods. The TL award provides limited tuition and the potential for full stipend support for one year (depending on pre or post-doctoral status), and requires full-time research or study. <a href="http://spectrum.stanford.edu/accordions/kl2tl1-clinical-research-training-awards">Learn more</a>.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+        
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+
+                                        <td class="wrapper last">
+
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="story-blurb">The American Heart Association and American Stroke Association are now accepting applications for their Ten Day Seminar <strong>July 23-August 4</strong>. The Seminar is a unique program for physicians, researchers, public health practitioners, nurses, and other healthcare professionals designed to provide training in new areas of investigation and application of new methods related to the promotion of cardiovascular health and prevention of heart disease and stroke, including descriptive epidemiology, quality of care and outcomes research, genetic epidemiology, policy, and environmental approaches to health. <a href="https://councilawards.heart.org/_layouts/15/ahalogin/login.aspx?ReturnUrl=%2f_layouts%2f15%2fAuthenticate.aspx%3fSource%3d%2Fdefault%2Easpx&Source=%2Fdefault%2Easpx">Learn more</a>.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+        
+                                    </tr>
+                                </table>
+
+                                <table class="row">
+                                    <tr>
+
+                                        <td class="wrapper last">
+
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="story-blurb">Applications are now open for Stanford’s Clinical Excellence Research Center (CERC) design fellowship. CERC is seeking early-career aspiring innovators from diverse backgrounds who have the potential to become leaders in the design of higher value health care. Fellows will work in multi-disciplinary teams to design new care models. Admissions are accepted on a rolling basis; and candidates are encouraged to apply as soon as possible. For further information contact Dominic Boccaccio at cercinquiry@stanford.edu. <a href="http://med.stanford.edu/cerc.html">Learn more</a>.</p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+        
+                                    </tr>
+                                </table>                                                                   
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper">
+
+                                            <table class="six columns">
+                                                <tr>
+                                                    <td>
+
+                                                        <h6 class="section-title" style="border-bottom: 2px solid #000; padding: 0 0px 10px;">Announcements »</h6>
+
+                                                        <br>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>
+                                                                        <p class="story-blurb">The Division of Gastroenterology and Hepatology will host a Gastroenterology Motility Symposium on February 10. The goal of this event is to update participants on the criteria for diagnosing functional GI and motility disorders and discuss treatment options to allow clinicians to tailor therapies based on symptoms, comorbidities, and preferences. <a href="http://medicinecalendars.stanford.edu/event/gastroenterology-and-hepatology-gastroenterology-motility-symposium/?instance_id=19720">Learn more</a>.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>
+                                                                        <p class="story-blurb">Students, fellows, post docs and colleagues – apply today through March 1 for a new course entitled “IDEO, Presence, and Human Experience in Medicine.” This course partners with IDEO to bring design thinking to the challenges of diagnostic error in medicine. Throughout the course, class participants will work with leadership – including IDEO designers and Abraham Verghese – to define a specific challenge and utilize the design thinking process to create deployable solutions. <a href="https://goo.gl/forms/7mCI7vf8PbcdVG0m1">Learn more</a>.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>
+                                                                        <p class="story-blurb">Join Stanford Medicine and Stanford Law School for a Race, Policing, and Public Health Symposium on March 6. This event aims to highlight research being done across interdisciplinary fields on race and law enforcement and the public health impact of police violence against minority groups. <a href="http://med.stanford.edu/rpph.html?mc_cid=104ee8442c&mc_eid=1c4264117c">Learn more</a>.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>   
+                                                        
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>
+                                                                        <p class="story-blurb">The next faculty meeting will be held on <strong>March 20</strong>. <a href="http://medicinecalendars.stanford.edu/event/department-of-medicine-faculty-meeting-7/?instance_id=19700">Learn more</a>.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <div>
+                                                                        <p class="story-blurb">Faculty members from both <a href="https://www.facebook.com/StanfordGSB/">Stanford Graduate School of Business</a> and Stanford Medicine have combined their research and strategic insights into a rigorous, relevant and experiential curriculum, which they'll deliver over the course of a week in March. Learn more about "The Innovative Health Care Leader" <a href="https://www.gsb.stanford.edu/exec-ed/programs/innovative-health-care-leader">here</a>.</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>          
+                                                 
+                                                    </td>
+        
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+
+                                        <td class="wrapper last">
+
+                                            <table class="six columns">
+                                                <tr>
+                                                    <td class="panel">
+
+                                                        <h6 class="other-news-header">In the News</h6>
+
+                                                        <br>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="in-the-news-excerpt">
+                                                                        <a href="https://www.nytimes.com/2017/01/23/world/trump-ban-foreign-aid-abortions.html"><span style="color: #2795b6 !important;">"Trump revives ban on foreign aid to health groups if they give abortion counseling"</span></a>
+                                                                        <span>- President Trump has reinstated a policy that freezes federal funding to health care providers in developing nations if they provide counseling mentioning abortion. This article references a study led by Eran Bendavid, that found when the Reagan-era policy was in place, abortion rates rose in countries that depended on U.S. funds for reproductive health services.</span>
+                                                                        <p class="post-excerpt">New York Times</p>
+
+                                                                        <br>
+
+                                                                        <p class="post-excerpt">Additional Coverage</p>
+
+                                                                        <p class="post-excerpt">Washington Post: <a href="https://www.washingtonpost.com/world/africa/trumps-revival-of-the-antiabortion-gag-rule-could-have-a-big-impact-in-africa/2017/01/24/2ec882e6-e23e-11e6-a419-eefe8eff0835_story.html">Trump’s revival of antiabortion ‘gag rule’ could have a big impact in Africa</a></p>
+                                                                        <p class="post-excerpt">The Atlantic: <a href="https://www.theatlantic.com/health/archive/2017/01/mexico-city-policy/514010/">Trump strikes at abortion with a revived foreign-aid rule</a></p>
+                                                                        <p class="post-excerpt">CNN: <a href="http://www.cnn.com/2017/01/23/opinions/global-gag-rule-backlash-garrett/index.html">Trump’s anti-abortion executive order</a></p>  
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <hr>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="in-the-news-excerpt">
+                                                                        <a href="http://www.reuters.com/article/us-health-breastcancer-side-effects-idUSKBN15A1IT"><span style="color: #2795b6 !important;">"Nearly half of breast cancer patients have severe treatment side effects"</span></a>
+                                                                        <span>- New research found that 42 percent of women who were treated for breast cancer have reported serious side effects in the seven months after diagnosis and following treatment. Co-author Alison Kurian is quoted.</span>
+                                                                        <p class="post-excerpt">Reuters</p>
+
+                                                                        <br>
+
+                                                                        <p class="post-excerpt">Additional Coverage</p>
+
+                                                                        <p class="post-excerpt">Medscape: <a href="http:/www.medscape.com/viewarticle/874999">Severe side effects higher than expected in breast cancer</a></p>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <hr>
+
+                                                        <table>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="in-the-news-excerpt">
+                                                                        <a href="https://www.statnews.com/2017/01/26/first-chimera-human-pig/"><span style="color: #2795b6 !important;">"First human-pig chimeras created, sparking hopes for transplantable organs – and debate"</span></a>
+                                                                        <span>- According to a new study, pig embryos that were injected with human stem cells began to grow organs containing human cells. Sean Wu provides comment.</span>
+                                                                        <p class="post-excerpt">STAT News</p>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+
+                                              </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <hr>
+
+                                <table class="row">
+                                    <tr>
+                                        <td class="wrapper">
+
+                                            <table class="four columns">
+                                                <tr>
+                                                    <td>
+                                                        <p class="story-title">Connect With Us <a style="color: #2BA6CB !important;" href="https://twitter.com/StanfordDeptMed">@StanfordDeptMed</a></p>
+                                                    </td>
+
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+
+                                        <td class="wrapper last">
+                                            <table class="eight columns">
+                                                <tr>
+                                                    <td>
+                                                        <a href="https://twitter.com/HeartBobH/status/825730652028821504">
+                                                            <img class="story-image" width="380" height="151" src="https://gallery.mailchimp.com/ed43491b233248944fc22dbd3/images/030e79ce-1c2c-4312-81e9-07a8d988ecc1.jpeg">
+                                                        </a>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+
+                <table class="container" style="background: #FFFFFF; margin-top: 20px !important; margin-bottom: 20px !important;">
+                        <tr>
+                            <td style="background-color: #F2F2F2; padding-left:20px; padding-right: 20px;">
+
+                                <table class="row">
+                                    <tr>
+
+                                        <td class="wrapper last">
+
+                                            <table class="twelve columns">
+                                                <tr>
+                                                    <td class="center">
+                                                        <center>
+                                                            <p style="text-align:center;">
+                                                                
+                                                                <a href="*|ARCHIVE|*"><span style="color: #2795b6 !important;">View in browser</span></a> | <a href="http://medicine.stanford.edu/about/contact-us.html"><span style="color: #2795b6 !important;">Contact Us</span></a> | <a href="*|UNSUB|*"><span style="color: #2795b6 !important;">Unsubscribe</span></a>
+                                                                
+                                                            </p>
+                                                        </center>
+                                                    </td>
+                                                    <td class="expander"></td>
+                                                </tr>
+                                            </table>
+
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+			</td>
+		</tr>
+	</table>
+   
+</body>
+</html>
