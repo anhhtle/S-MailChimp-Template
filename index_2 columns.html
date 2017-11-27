@@ -95,13 +95,8 @@
             }
 
             ul {
-                display: block;
                 list-style-type: disc;
-                -webkit-margin-before: 1em;
-                -webkit-margin-after: 1em;
-                -webkit-margin-start: 0px;
-                -webkit-margin-end: 0px;
-                -webkit-padding-start: 40px;
+                -webkit-padding-start: 15px;
             }
 
             li {
@@ -241,6 +236,10 @@
                 font-family: "Georgia","serif";
             }
 
+            .in-the-news-excerpt {
+                padding-bottom: 10px;
+            }
+
             .in-the-news-excerpt a {
                 font-size: 11px;
             }
@@ -256,6 +255,13 @@
                 font-family: "Helvetica","sans serif";
                 font-size: 10px;
                 line-height: 13px;
+            }
+
+            hr {
+                color: #d9d9d9;
+                background-color: #d9d9d9;
+                height: 1px;
+                border: none;
             }
 
             /* Twitter */
@@ -458,33 +464,57 @@
                         </div>
                     </section>
 
-                    <!-- Announcements -->
-                    <section class="wrapper last">
-                        <h6 class="section-title">Announcements »</h6>
-                        <div class="wrapper last">
-                            <ul>
-                                <li><p>View the latest edition of the Center for Digital Health’s newsletter. <a href="http://mailchi.mp/8980057cba31/cdh-newsletter-november?e=8eb7b9aaf9">Learn more</a></p></li>
-                                <li><p>The Stanford Health Care Communication Program is now offering a clinician communication &amp; leadership workshop called ACES (Advancing Communication Excellence at Stanford). This 8-hour workshop utilizes an evidence-based, relationship-centered communication model that is unique to clinicians, and is facilitated by our own Stanford faculty/staff. Registration is now open to all Physicians, NPs, and PAs at no cost. Workshops will take place throughout <strong>November</strong>. All workshop attendees are eligible to receive 7.5 CME Credit Hours. Interested? Register <a href="https://service-excellence.acuityscheduling.com/schedule.php?appointmentType=3435436">here</a>. And email <a href="mailto:physiciancoach@stanfordhealthcare.org">physiciancoach@stanfordhealthcare.org</a> with any questions.</p></li>
-                                <li><p>The Department of Medicine is participating in the second annual employee donation drive, called Cardinal at Work Cares Giving Campaign for families at the Ronald McDonald House and CityTeam homeless shelters. Our goal is to collect 300 new travel-sized deodorants as part of the university-wide goal to fulfill 1,200 personal care gift packs. Drop off your donation in collection bins located at Grant S-102 by <strong>December 1</strong>. </p></li>
-                                <li><p>AAMC will host a Mid-Career Women Faculty Professional Development Seminar in Scottsdale, Arizona, <strong>December 2-5</strong>. The seminar is a three-and-a-half-day program designed for women holding medical school appointments at the associate professor level, and holding leadership positions within their discipline, department or institution. Assistant professors and full professors may be considered based on experience. <a href="http://www.cvent.com/events/2017-mid-career-women-faculty-leadership-development-seminar/event-summary-c534f2140a924495acf8bb5cb83e0e5a.aspx">Learn more</a></p></li>
-                                <li><p>Save the date! The Department of Medicine holiday party will be held on <strong>December 13</strong>. RSVP via the Paperless Post invite that was sent out on November 1. <a href="http://medicinecalendars.stanford.edu/event/department-of-medicine-holiday-party/?instance_id=20300">Learn more</a></p></li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <!-- In the news -->
-                    <section class="wrapper last">
-                        <div class="panel">
-                            <h6 class="other-news-header">In the News</h6>
-                            <br>
-                            <div class="in-the-news-excerpt">
-                                <a href="https://www.medscape.com/viewarticle/888751"><span style="color: #2795b6 !important;">"High-value cancer care keeps costs down? Yes, it’s possible!"</span></a>
-                                <span>- This article references two studies lead by <b>Arnold Milstein</b>.</span>
-                                <p class="post-excerpt">Medscape</p>
+                    <div class="flex">
+                        <!-- Announcements -->
+                        <section class="six wrapper">
+                            <h6 class="section-title">Announcements »</h6>
+                            <div class="wrapper">
+                                <ul style="padding-bottom: 10px;">
+                                    <li><p>View the latest edition of the Center for Digital Health’s newsletter. <a href="http://mailchi.mp/8980057cba31/cdh-newsletter-november?e=8eb7b9aaf9">Learn more</a></p></li>
+                                    <li><p>The Stanford Health Care Communication Program is now offering a clinician communication &amp; leadership workshop called ACES (Advancing Communication Excellence at Stanford). This 8-hour workshop utilizes an evidence-based, relationship-centered communication model that is unique to clinicians, and is facilitated by our own Stanford faculty/staff. Registration is now open to all Physicians, NPs, and PAs at no cost. Workshops will take place throughout <strong>November</strong>. All workshop attendees are eligible to receive 7.5 CME Credit Hours. Interested? Register <a href="https://service-excellence.acuityscheduling.com/schedule.php?appointmentType=3435436">here</a>. And email <a href="mailto:physiciancoach@stanfordhealthcare.org">physiciancoach@stanfordhealthcare.org</a> with any questions.</p></li>
+                                    <li><p>The Department of Medicine is participating in the second annual employee donation drive, called Cardinal at Work Cares Giving Campaign for families at the Ronald McDonald House and CityTeam homeless shelters. Our goal is to collect 300 new travel-sized deodorants as part of the university-wide goal to fulfill 1,200 personal care gift packs. Drop off your donation in collection bins located at Grant S-102 by <strong>December 1</strong>. </p></li>
+                                    <li><p>AAMC will host a Mid-Career Women Faculty Professional Development Seminar in Scottsdale, Arizona, <strong>December 2-5</strong>. The seminar is a three-and-a-half-day program designed for women holding medical school appointments at the associate professor level, and holding leadership positions within their discipline, department or institution. Assistant professors and full professors may be considered based on experience. <a href="http://www.cvent.com/events/2017-mid-career-women-faculty-leadership-development-seminar/event-summary-c534f2140a924495acf8bb5cb83e0e5a.aspx">Learn more</a></p></li>
+                                    <li><p>Save the date! The Department of Medicine holiday party will be held on <strong>December 13</strong>. RSVP via the Paperless Post invite that was sent out on November 1. <a href="http://medicinecalendars.stanford.edu/event/department-of-medicine-holiday-party/?instance_id=20300">Learn more</a></p></li>
+                                </ul>
                             </div>
-                        </div>
-                    </section>
-                    <br>
+                        </section>
+    
+                        <!-- In the news -->
+                        <section class="six wrapper last">
+                            <div class="panel">
+                                <h6 class="other-news-header">In the News</h6>
+                                <br>
+                                <div class="in-the-news-excerpt">
+                                    <a href="https://www.nytimes.com/2017/01/23/world/trump-ban-foreign-aid-abortions.html">"Trump revives ban on foreign aid to health groups if they give abortion counseling"</a>
+                                    <span>- President Trump has reinstated a policy that freezes federal funding to health care providers in developing nations if they provide counseling mentioning abortion. This article references a study led by Eran Bendavid, that found when the Reagan-era policy was in place, abortion rates rose in countries that depended on U.S. funds for reproductive health services.</span>
+                                    <p class="post-excerpt">New York Times</p>
+                                    <br>
+                                    <p class="post-excerpt">Additional Coverage</p>
+                                    <p class="post-excerpt">Washington Post: <a href="https://www.washingtonpost.com/world/africa/trumps-revival-of-the-antiabortion-gag-rule-could-have-a-big-impact-in-africa/2017/01/24/2ec882e6-e23e-11e6-a419-eefe8eff0835_story.html">Trump’s revival of antiabortion ‘gag rule’ could have a big impact in Africa</a></p>
+                                    <p class="post-excerpt">The Atlantic: <a href="https://www.theatlantic.com/health/archive/2017/01/mexico-city-policy/514010/">Trump strikes at abortion with a revived foreign-aid rule</a></p>
+                                    <p class="post-excerpt">CNN: <a href="http://www.cnn.com/2017/01/23/opinions/global-gag-rule-backlash-garrett/index.html">Trump’s anti-abortion executive order</a></p>  
+                                </div>
+                                <hr>
+                                <div class="in-the-news-excerpt">
+                                    <a href="http://www.reuters.com/article/us-health-breastcancer-side-effects-idUSKBN15A1IT">"Nearly half of breast cancer patients have severe treatment side effects"</a>
+                                    <span>- New research found that 42 percent of women who were treated for breast cancer have reported serious side effects in the seven months after diagnosis and following treatment. Co-author Alison Kurian is quoted.</span>
+                                    <p class="post-excerpt">Reuters</p>
+                                    <br>
+                                    <p class="post-excerpt">Additional Coverage</p>
+                                    <p class="post-excerpt">Medscape: <a href="http:/www.medscape.com/viewarticle/874999">Severe side effects higher than expected in breast cancer</a></p>
+                                </div>
+                                <hr>
+                                <div class="in-the-news-excerpt">
+                                    <a href="https://www.statnews.com/2017/01/26/first-chimera-human-pig/"><span style="color: #2795b6 !important;">"First human-pig chimeras created, sparking hopes for transplantable organs – and debate"</span></a>
+                                    <span>- According to a new study, pig embryos that were injected with human stem cells began to grow organs containing human cells. Sean Wu provides comment.</span>
+                                    <p class="post-excerpt">STAT News</p>
+                                </div>
+                            </div>
+                        </section>
+                        <br>
+                    </div>
+
+                    <hr>
 
                     <!-- Twitter -->
                     <section class="flex" style="padding-bottom: 10px;">
